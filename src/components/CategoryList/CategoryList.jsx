@@ -12,7 +12,7 @@ const CategoryList = () => {
     return (
         <div className="my-10">
             <h2 className="text-5xl text-center">Job Category List</h2>
-            <p className="text-center text-sm md:text-base">Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <p className="text-center text-sm md:text-base my-3">Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 md:gap-5">
                 {
                     categories.map(category => <Category key={category.id} category={category}></Category>)
