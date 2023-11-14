@@ -9,6 +9,11 @@ import { CgNotes } from "react-icons/cg";
 import { MdLocalPhone } from "react-icons/md";
 import { MdAlternateEmail } from "react-icons/md";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../../utility/localstorage";
+
+
 
 
 const JobDetails = () => {
@@ -17,7 +22,10 @@ const JobDetails = () => {
     const idInt = parseInt(id)
     const job = jobs.find(job => job.id === idInt)
 
-
+    const handleApplyJob = () => {
+        saveJobApplication(id);
+        toast('You have applied successfully')
+    }
     return (
         <div>
             <div className="bg-gradient-to-r from-cyan-100 to-blue-100 rounded-md text-center text-3xl ">
@@ -53,11 +61,12 @@ const JobDetails = () => {
                     </div>
                     </div>
                     <div>
-                        <button className="bg-gradient-to-r from-cyan-500 to-blue-500 w-full rounded">Apply Now</button>
+                        <button onClick={handleApplyJob} className="bg-gradient-to-r from-cyan-500 to-blue-500 w-full rounded">Apply Now</button>
                     </div>
                 </div>
 
             </div>
+            <ToastContainer />
         </div>
     );
 };
