@@ -27,7 +27,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-gradient-to-r from-cyan-500 to-blue-500">Star Applying</a>
+                <a className="btn font-normal bg-gradient-to-r from-cyan-500 to-blue-500 md:text-[16px] md:font-medium">Star Applying</a>
             </div>
         </div>
     );
