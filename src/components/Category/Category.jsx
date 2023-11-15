@@ -15,8 +15,7 @@ const Category = ({ category }) => {
 
 
 Category.propTypes ={
-    category: PropTypes.object.isRequired,
-    handelVisitedCountries: PropTypes.func.isRequired
+    category: PropTypes.object.isRequired
 
 }
 
